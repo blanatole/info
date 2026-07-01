@@ -1,26 +1,6 @@
 {% include base_path %}
-{% assign is_vi = false %}
-{% if page.url == '/vi/' or page.url contains '/vi/' %}
-  {% assign is_vi = true %}
-{% endif %}
-{% if is_vi %}
-  {% assign home_url = '/vi/' %}
-  {% assign nav_items = site.data.navigation.vi %}
-  {% assign en_path = page.url | remove_first: '/vi' %}
-  {% if en_path == '' %}
-    {% assign en_path = '/' %}
-  {% endif %}
-  {% assign vi_path = page.url %}
-{% else %}
-  {% assign home_url = '/' %}
-  {% assign nav_items = site.data.navigation.main %}
-  {% assign en_path = page.url %}
-  {% if page.url == '/' %}
-    {% assign vi_path = '/vi/' %}
-  {% else %}
-    {% assign vi_path = '/vi' | append: page.url %}
-  {% endif %}
-{% endif %}
+{% assign home_url = '/' %}
+{% assign nav_items = site.data.navigation.main %}
 <div class="masthead">
   <div class="masthead__inner-wrap">
     <div class="masthead__menu">
@@ -40,21 +20,6 @@
               <a href="{{ domain }}{{ link.url }}">{{ link.title }}</a>
             </li>
           {% endfor %}
-          <li class="masthead__menu-item language-switch persist">
-            <details class="language-switch__dropdown">
-              <summary class="language-switch__button" aria-label="Language selector">
-                {% if is_vi %}VI{% else %}EN{% endif %}
-                <span class="language-switch__caret" aria-hidden="true"></span>
-              </summary>
-              <div class="language-switch__menu">
-                {% if is_vi %}
-                  <a href="{{ en_path | relative_url }}">EN</a>
-                {% else %}
-                  <a href="{{ vi_path | relative_url }}">VI</a>
-                {% endif %}
-              </div>
-            </details>
-          </li>
           <li id="theme-toggle" class="masthead__menu-item persist tail">
             <a role="button" aria-labelledby="theme-icon"><i id="theme-icon" class="fa-solid fa-sun" aria-hidden="true" title="toggle theme"></i></a>
           </li>

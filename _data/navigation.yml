@@ -19,13 +19,3 @@ main:
     
   # - title: "CV"
   #   url: /cv-json/
-
-vi:
-  - title: "Công bố"
-    url: /vi/publications/
-
-  - title: "Kinh nghiệm"
-    url: /vi/experience/
-
-  - title: "CV"
-    url: /vi/cv/
