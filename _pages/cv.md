@@ -8,14 +8,14 @@ redirect_from:
 ---
 
 <p>
-  <a class="btn" href="{{ '/files/NguyenMinhY-CV-072026.pdf' | relative_url }}" target="_blank" rel="noopener">
+  <a class="btn" href="{{ '/files/cv.pdf' | relative_url }}" target="_blank" rel="noopener">
     Open CV PDF
   </a>
 </p>
 
 <div class="pdf-preview">
   <iframe
-    src="{{ '/files/NguyenMinhY-CV-072026.pdf' | relative_url }}"
+    src="{{ '/files/cv.pdf' | relative_url }}"
     title="Nguyen Minh Y CV"
     width="100%"
     height="900"
