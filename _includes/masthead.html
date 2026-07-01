@@ -41,9 +41,11 @@
             </li>
           {% endfor %}
           <li class="masthead__menu-item language-switch persist">
-            <a class="{% unless is_vi %}selected-language{% endunless %}" href="{{ en_path | relative_url }}">EN</a>
-            <span>/</span>
-            <a class="{% if is_vi %}selected-language{% endif %}" href="{{ vi_path | relative_url }}">VI</a>
+            {% if is_vi %}
+              <a class="language-switch__button" href="{{ en_path | relative_url }}" aria-label="Switch to English">EN</a>
+            {% else %}
+              <a class="language-switch__button" href="{{ vi_path | relative_url }}" aria-label="Chuyen sang tieng Viet">VI</a>
+            {% endif %}
           </li>
           <li id="theme-toggle" class="masthead__menu-item persist tail">
             <a role="button" aria-labelledby="theme-icon"><i id="theme-icon" class="fa-solid fa-sun" aria-hidden="true" title="toggle theme"></i></a>
