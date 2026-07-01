@@ -37,3 +37,10 @@
     "layout/sidebar",
     "layout/json_cv"
 ;
+
+.page__content p,
+.page__content li,
+.archive__item-excerpt {
+  text-align: justify;
+  text-justify: inter-word;
+}
