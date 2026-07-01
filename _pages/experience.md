@@ -1,6 +1,7 @@
 ---
 layout: single
 title: "Experience"
+lang: en
 permalink: /experience/
 author_profile: true
 ---

@@ -44,3 +44,17 @@
   text-align: justify;
   text-justify: inter-word;
 }
+
+.language-switch {
+  white-space: nowrap;
+}
+
+.language-switch a {
+  padding-left: 0.25rem;
+  padding-right: 0.25rem;
+}
+
+.language-switch .selected-language {
+  font-weight: 700;
+  text-decoration: underline;
+}
